@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+.odamenubar{
+  color: #000000;
+  background-color: #ffffff;
+}
+/*flex any div*/
+.flexthisdiv{
+  display: flex;
+  
+}
+.open-data{
+font-family: Nunito Sans;
+font-style: normal;
+font-weight: 900;
+font-size: 34.623px;
+line-height: 47px;
+
+color: #344127;
+}
+.menu-items{
+  font-family: Nunito Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+
+
+color: #000000;
+flexGrow: 1,
+
+}
+.right-margin{
+  margin-right: 50px;
+}
+.become-a-contributor-bg{
+  background: #344127
+}
