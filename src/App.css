@@ -46,7 +46,7 @@
 
 .flexthisdiv {
   display: flex;
-  }
+}
 
 .open-data {
   font-family: elvetica, Arial, sans-serif, Nunito Sans;
@@ -58,7 +58,7 @@
 }
 
 .menu-items {
-  font-family: Nunito Sans;
+  font-family: elvetica, Arial, sans-serif, Nunito Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

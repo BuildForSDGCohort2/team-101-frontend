@@ -1,7 +1,7 @@
 import React from 'react';
-import MenuAppBar from './components/menu';
-import logo from './logo.svg';
-import './App.css';
+import MenuAppBar from "./components/menu";
+import logo from "./logo.svg";
+import "./App.css";
 
 
 function App() {
