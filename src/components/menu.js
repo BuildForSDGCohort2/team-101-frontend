@@ -1,17 +1,17 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import IconButton from "@material-ui/core/IconButton";
+//import MenuIcon from "@material-ui/icons/Menu";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+//import Switch from "@material-ui/core/Switch";
+//import FormControlLabel from "@material-ui/core/FormControlLabel";
+//import FormGroup from "@material-ui/core/FormGroup";
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
+//import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,14 +24,14 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   color:{
-      backgroundColor: '#ffffff',
+      backgroundColor: "#ffffff",
 
   },
     onboardButton:{
     flexGrow: 1,
-    backgroundColor: '#344127',
+    backgroundColor: "#344127",
     padding: 5,
-    color:'#ffffff',
+    color:"#ffffff",
   },
 }));
 
@@ -42,9 +42,9 @@ export default function MenuAppBar() {
   const open = Boolean(anchorEl);
 
   //if user is logged in set auth to true
-  const handleChange = (event) => {
+  /* const handleChange = (event) => {
     setAuth(event.target.checked);
-  };
+  }; */
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
