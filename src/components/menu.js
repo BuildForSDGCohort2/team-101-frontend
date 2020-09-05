@@ -41,10 +41,7 @@ export default function MenuAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
-  //if user is logged in set auth to true
-  /* const handleChange = (event) => {
-    setAuth(event.target.checked);
-  }; */
+  
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
