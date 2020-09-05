@@ -77,3 +77,13 @@
 .become-a-contributor-bg {
   background: #344127;
 }
+
+.odaFlexGrow{
+  flex-grow: 1;
+}
+
+.onboardButton{
+  background-color: #344127;
+  padding: 5px;
+  color: #ffffff;
+  }
