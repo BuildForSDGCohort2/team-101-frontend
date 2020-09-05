@@ -67,7 +67,7 @@
   /* identical to box height */
 
   color: #000;
-  flexGrow: 1,
+  flex-grow: 1,
 }
 
 .right-margin {
@@ -78,12 +78,12 @@
   background: #344127;
 }
 
-.odaFlexGrow{
+.odaFlexGrow {
   flex-grow: 1;
 }
 
-.onboardButton{
+.onboardButton {
   background-color: #344127;
   padding: 5px;
-  color: #ffffff;
+  color: #fff;
   }
