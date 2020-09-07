@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+.odamenubar {
+  color: #000;
+  background-color: #fff;
+}
+
+/* flex any div */
+
+.flexthisdiv {
+  display: flex;
+}
+
+.open-data {
+  font-family: elvetica, Arial, sans-serif, Nunito Sans;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 34.623px;
+  line-height: 47px;
+  color: #344127;
+}
+
+.menu-items {
+  font-family: elvetica, Arial, sans-serif, Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  /* identical to box height */
+
+  color: #000;
+  flex-grow: 1;
+}
+
+.right-margin {
+  margin-right: 50px;
+}
+
+.become-a-contributor-bg {
+  background: #344127;
+}
+
+.odaFlexGrow {
+  flex-grow: 1;
+}
+
+.onboardButton {
+  background-color: #344127;
+  padding: 5px;
+  color: #fff;
+}
