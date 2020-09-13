@@ -2,6 +2,7 @@
 .onboard-top-margin {
   margin-top: 40px;
 }
+
 .onboard-bottom-margin {
   margin-bottom: 40px;
 }
@@ -10,7 +11,7 @@
   height: 67px;
   margin-bottom: 1rem;
   border: 1px solid #bdbdbd;
-  box-sizing:  border-box;
+  box-sizing: border-box;
 }
 
 .center-a-form {
