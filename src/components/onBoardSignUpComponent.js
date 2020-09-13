@@ -52,5 +52,5 @@ export default function OnBoardSignUp (props){
     <Col><img src ="./images/Data_Trends_bro_1.svg" alt ="data trend"/></Col>
   </Row>
 </Container>
-)
+);
 }

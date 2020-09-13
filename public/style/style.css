@@ -1,22 +1,23 @@
 
 .onboard-top-margin {
-	margin-top:  40px;
+  margin-top: 40px;
 }
 .onboard-bottom-margin {
-	margin-bottom:  40px;
+  margin-bottom: 40px;
 }
+
 .form-input-box {
-	height:  67px;
-	margin-bottom:  1rem;
-	border:  1px solid #bdbdbd;
-    box-sizing:  border-box;
+  height: 67px;
+  margin-bottom: 1rem;
+  border: 1px solid #bdbdbd;
+  box-sizing:  border-box;
 }
 
 .center-a-form {
-	text-align:  center;
-	align-self:  center;
+  text-align: center;
+  align-self: center;
 }
-.login {
 
-	background-color: #fff;
+.login {
+  background-color: #fff;
 }
