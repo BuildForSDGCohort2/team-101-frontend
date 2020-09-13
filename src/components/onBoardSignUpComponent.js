@@ -10,6 +10,7 @@ export default function OnBoardSignUp (props){
 <Container className ="onboard-bottom-margin">
   <Row>
     <Col><h1>Become a contributor</h1></Col>
+    <Col> </Col>
     
   </Row>
   <Row>
@@ -41,16 +42,15 @@ export default function OnBoardSignUp (props){
     <Form.Control size="lg" type="password" placeholder="Confirm Password" className = "onboard-top-margin" />
   </Form.Group>
   
-  <Button variant="secondary" size="lg" block className ="primary" type="submit" className ="onboard-top-margin">
+  <Button variant="secondary" size="lg" block  type="submit" className ="onboard-top-margin">
     Register
   </Button>
 </Form>
 
 </Col>
     
-    <Col><img src ="./images/Data_Trends_bro_1.svg" /></Col>
+    <Col><img src ="./images/Data_Trends_bro_1.svg" alt ="data trend"/></Col>
   </Row>
 </Container>
-
-  )
+)
 }

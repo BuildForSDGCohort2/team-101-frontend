@@ -1,24 +1,18 @@
 
-.onboard-top-margin{
-	margin-top: 40px;
+.onboard-top-margin {
+	margin-top:  40px;
 }
-.onboard-bottom-margin{
-	margin-bottom: 40px;
+.onboard-bottom-margin {
+	margin-bottom:  40px;
 }
-.form-input-box{
-	height: 67px;
-	margin-bottom: 1rem;
-	border: 1px solid #BDBDBD;
-    box-sizing: border-box;
+.form-input-box {
+	height:  67px;
+	margin-bottom:  1rem;
+	border:  1px solid #bdbdbd;
+    box-sizing:  border-box;
 }
-.primary {
-    color: #fff;
-    background-color: #2E4C80;
-    background-color: #BDBDBD;
-    border-color: #2E4C80;
-    border-color: #BDBDBD;
-}
-.center-a-form{
-	text-align: center;
-	align-self: center;
+
+.center-a-form {
+	text-align:  center;
+	align-self:  center;
 }
