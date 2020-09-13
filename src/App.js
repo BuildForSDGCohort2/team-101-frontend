@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuAppBar from "./components/menu";
+import OnBoardSignUp from "./components/onBoardSignUpComponent";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
     <MenuAppBar/>
+    <OnBoardSignUp/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
