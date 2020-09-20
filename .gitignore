@@ -11,6 +11,9 @@
 # production
 /build
 
+#boostrap
+public/bootstrap-4.4.1/
+
 # misc
 .DS_Store
 .env.local
