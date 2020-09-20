@@ -27,13 +27,13 @@
 @media screen and (max-width: 360px){
 	.nav-bg{
 		background-color: #fff;
-black;
-z-index: 10;
+    black;
+    z-index: 10;
 	}
 }
 @media screen and (max-width: 360px){
 	.homeage-zindex{
 		z-index: 
-
-	}
+  }
 }
+

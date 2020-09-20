@@ -91,13 +91,13 @@
 .noStyleList {
   list-style: none;
 }
+
 .noStyleListFooter {
   list-style: none;
   text-align: left;
 }
 
 .alignTextLeft {
-  
   text-align: left;
 }
 
@@ -106,17 +106,17 @@
 }
 
 .footerPadding {
-  padding-top: 4rem ;
-  padding-bottom: 8rem ;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
   background-color: #f3f3f3;
-  colorr: #000;
+  color: #000;
 }
 
 .brandAfriData {
-  font-weight:900;
-  font-style:normal; 
-  font-size:32.62px;
-  line-height:47.23px; 
+  font-weight: 900;
+  font-style: normal; 
+  font-size: 32.62px;
+  line-height: 47.23px; 
   color: #344127;
 }
 
