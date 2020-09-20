@@ -87,3 +87,68 @@
   padding: 5px;
   color: #fff;
 }
+
+.noStyleList {
+  list-style: none;
+}
+.noStyleListFooter {
+  list-style: none;
+  text-align: left;
+}
+
+.alignTextLeft {
+  
+  text-align: left;
+}
+
+.afriDataPrimary {
+  color: #344127;
+}
+
+.footerPadding {
+  padding-top: 4rem ;
+  padding-bottom: 8rem ;
+  background-color: #f3f3f3;
+  colorr: #000;
+}
+
+.brandAfriData {
+  font-weight:900;
+  font-style:normal; 
+  font-size:32.62px;
+  line-height:47.23px; 
+  color: #344127;
+}
+
+a.noDecorationMenu {
+  text-decoration: none !important; 
+  color: #000;
+  text-decoration-style: none !important;
+}
+
+a.noDecorationContributor {
+  text-decoration: none !important; 
+  color: #fff;
+  text-decoration-style: none !important;
+}
+
+a.noDecorationFooter {
+  text-decoration: none;
+  color: #000;
+}
+
+.copyright {
+  background-color: #344127;
+  color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.socialIcon {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.afriDataButton {
+  background-color: #344127;
+}
