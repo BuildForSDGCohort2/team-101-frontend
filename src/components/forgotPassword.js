@@ -4,6 +4,7 @@ import { Row} from "react-bootstrap";
 import {Col} from "react-bootstrap";
 import {Form} from "react-bootstrap";
 import {Button} from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function ResetPassword (props){
 	return(
@@ -29,7 +30,7 @@ export default function ResetPassword (props){
            type="submit" className ="onboard-top-margin">
           Reset Password
   </Button>
-  <a href ="/login"> Back to Login</a>
+  <Link to ="/login"><a href ="/login"> Back to Login</a></Link>
 </Form>
 
 </Col>

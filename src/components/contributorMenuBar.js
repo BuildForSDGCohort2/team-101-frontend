@@ -10,14 +10,14 @@ return (
                     
                   
 <nav className="navbar navbar-expand-lg nav-bg ">
-
+ <Link to ="/">
   <a 
     className="navbar-brand" 
-    href ="/hoome">
+    href ="/">
   <img src="images/onboard_menu_icon.svg" alt ="onboard_menu_icon"/>
                     <span className ="brandAfriData">Open Data</span>
          
-  </a>
+  </a></Link>
   <button 
       className="navbar-toggler" 
       type="button" 
@@ -33,7 +33,7 @@ return (
 
      <Link className ="#" to ="/catalog">
     <li className="nav-item ">
-        <a className="nav-link noDecorationMenu" href="#">Catalog <span className="sr-only">(current)</span></a>
+        <a className="nav-link noDecorationMenu" href="/catalog">Catalog <span className="sr-only">(current)</span></a>
       </li></Link>
      
        <Link to ="/developer">
@@ -66,7 +66,7 @@ return (
         </Link>
        
             
-       <Link to ="/signup-to-contribute">
+       <Link to ="signup-to-contribute">
      <li className ="list-no-style afriDataButton"><a className="nav-link noDecorationContributor"
       href="/signup-to-contribute">
      Become a Contributor </a></li> 
