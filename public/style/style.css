@@ -1,0 +1,39 @@
+
+.onboard-top-margin {
+  margin-top: 40px;
+}
+
+.onboard-bottom-margin {
+  margin-bottom: 40px;
+}
+
+.form-input-box {
+  height: 67px;
+  margin-bottom: 1rem;
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+}
+
+.center-a-form {
+  text-align: center;
+  align-self: center;
+}
+
+.login {
+  background-color: #fff;
+}
+
+
+@media screen and (max-width: 360px){
+	.nav-bg{
+		background-color: #fff;
+    black;
+    z-index: 10;
+	}
+}
+@media screen and (max-width: 360px){
+	.homeage-zindex{
+		z-index: 
+  }
+}
+
