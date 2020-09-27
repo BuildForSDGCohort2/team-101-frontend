@@ -1,8 +1,8 @@
                   
 import React from "react";
 import { Link } from "react-router-dom";
-import AwesomeSlider from 'react-awesome-slider';
-import AwesomeSliderStyles from 'react-awesome-slider/src/styles';
+import AwesomeSlider from "react-awesome-slider";
+import AwesomeSliderStyles from "react-awesome-slider/src/styles";
 
 
  const slider = (
@@ -131,4 +131,4 @@ export default function LandingPage()
 
 </div>
 
-)};
+);}

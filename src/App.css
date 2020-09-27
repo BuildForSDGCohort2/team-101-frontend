@@ -153,29 +153,13 @@ a.noDecorationFooter {
   background-color: #344127;
 }
 
-.aws-btn {
-  --slider-height-percentage: 60%;
-  --slider-transition-duration: 700ms;
-  --organic-arrow-thickness: 4px;
-  --organic-arrow-border-radius: 13px;
-  --organic-arrow-height: 40px;
-  --organic-arrow-color: #cf3438;
-  --control-button-width: 10%;
-  --control-button-height: 25%;
-  --control-button-background: transparent;
-  --control-bullet-color: #fff;
-  --control-bullet-active-color: #DC5500;
-  --loader-bar-color: #fff;
-  --loader-bar-height: 1px;
-}
-
 /* landing page video slider button */
 
 .awssld__bullets .awssld__bullets--active {
   transform: scale(1.5);
-  background: #DC5500; 
+  background: #dc5500; 
 }
 
 .awssld__bullets button {
-  background-color:#fff;
+  background-color: #fff;
 }
