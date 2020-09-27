@@ -114,9 +114,9 @@ function Container() {
                 Africa’s growing technology revolution.
                 <br />
                 <br />
-                If you have any abouts how to upload your first dataset, 
+                If you have any abouts how to upload your first dataset,
                 <a class="d-inline btn_ClickHere" href="/">
-                   click here.
+                  click here.
                 </a>
               </h5>
             </div>
@@ -233,13 +233,7 @@ function Container() {
                 </div>
                 <div class="col-3 float-left">
                   <div class="card mb-2 mx-3">
-                    <div
-                      class="card-body"
-                      style={{
-                        background:
-                          "linear-gradient(178.18deg,#344127 -13.56%,#f9d48e -13.56%,#344127 158.3%)",
-                      }}
-                    >
+                    <div class="card-body">
                       <img
                         src="images/dashboard-svg/House_searching-bro.svg"
                         alt=""
