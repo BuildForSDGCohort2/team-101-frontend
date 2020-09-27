@@ -23,9 +23,11 @@
 body {
   overflow-x: hidden;
 }
+
 .OdaSection .card-body {
   background-color: #bd8e39;
 }
+
 .active {
   color: #fff;
 }
