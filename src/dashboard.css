@@ -23,16 +23,9 @@
 body {
   overflow-x: hidden;
 }
-
 .OdaSection .card-body {
-  background: linear-gradient(
-    178.18deg,
-    #344127 -13.56%,
-    #f9d48e -13.56%,
-    #344127 158.3%
-  )
+  background-color: #bd8e39;
 }
-
 .active {
   color: #fff;
 }
