@@ -2,8 +2,7 @@
   background: #344127;
 }
 
-.Aside-title:hover {
-  color: #f9d48e !important;
+.row .asideNav .container .Aside-title:hover {
   text-decoration: none;
 }
 
@@ -16,7 +15,7 @@
 }
 
 .btn4 {
-  border: 5p solid #fff;
+  border: 5px solid #fff;
   border-radius: 2px;
   font-size: 20px;
 }
@@ -28,14 +27,10 @@ body {
 .OdaSection .card-body {
   background: linear-gradient(
     178.18deg,
-    #344127 -13.56%,
-    #f9d48e -13.56%,
-    #344127 158.3%
+    rgba(249, 212, 142, 0.9) -13.56%,
+    rgba(52, 65, 39, 0.9) -13.56%,
+    rgba(249, 212, 142, 0.9) 158.3%
   );
-}
-
-.btn_ClickHere {
-  text-decoration: dotted !important;
 }
 
 .active {

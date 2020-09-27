@@ -114,10 +114,9 @@ function Container() {
                 Africa’s growing technology revolution.
                 <br />
                 <br />
-                If you have any abouts how to upload your first dataset,
+                If you have any abouts how to upload your first dataset, 
                 <a class="d-inline btn_ClickHere" href="/">
-                  {" "}
-                  click here.
+                   click here.
                 </a>
               </h5>
             </div>
