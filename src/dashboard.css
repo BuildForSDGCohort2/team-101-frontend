@@ -1,39 +1,43 @@
 .nav-left {
-    background: #344127;
+  background: #344127;
 }
 
 .Aside-title:hover {
-    color: #F9D48E !important;
-    text-decoration: none;
+  color: #f9d48e !important;
+  text-decoration: none;
 }
+
 .asideNav .nav-link {
-     color: #F9D48E
- }
-.asideNav .nav-link:hover {
-    color: #fff
+  color: #f9d48e;
 }
 
+.asideNav .nav-link:hover {
+  color: #fff;
+}
 
- .btn4 {
-     border: 5p solid #fff;
-     border-radius: 2px;
-     font-size: 20px;
- }
-
-
+.btn4 {
+  border: 5p solid #fff;
+  border-radius: 2px;
+  font-size: 20px;
+}
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
-
-
 
 .OdaSection .card-body {
-    background: linear-gradient(178.18deg, #344127 -13.56%, #F9D48E -13.56%, #344127 158.3%);
+  background: linear-gradient(
+    178.18deg,
+    #344127 -13.56%,
+    #f9d48e -13.56%,
+    #344127 158.3%
+  );
 }
+
 .btn_ClickHere {
-    text-decoration:dotted !important;
+  text-decoration: dotted !important;
 }
+
 .active {
-    color: #fff;
+  color: #fff;
 }
