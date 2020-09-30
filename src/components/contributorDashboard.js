@@ -72,11 +72,21 @@ function Container() {
                   width="20"
                   height="10"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRMdVmNPFIXw0viVx_1ikpgYWNaEvKVPdKcg&usqp=CAU"
+
+            <li class="nav-item pl-3 pr-1">
+              <a href="/" class="nav-link text-dark py-0">
+                <img
+                  class="img-fluid rounded-circle pr-2"
+                  width="30"
+                  height="30"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTUwjB_JQ42cHVQHw6eWFp882_4okQmwCJxPA&usqp=CAU"
+
                   alt=""
                 />
                 Johnvibe104
               </a>
             </li>
+
 
             <li class="dropdown show nav-item px-3">
               <a
@@ -99,6 +109,27 @@ function Container() {
                 <a class="dropdown-item" href="/">
                   Something else here
                 </a>
+
+            <li class="nav-item pr-3">
+              <div class="dropdown mr-1">
+                <button
+                  type="button"
+                  class="dropdown-toggle border-0 bg-transparent"
+                  id="dropdownMenuOffset"
+                  data-toggle="dropdown"
+                  data-offset="10,20"
+                >
+                  
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                  <a class="dropdown-item" href="/">
+                    Log in
+                  </a>
+                  <a class="dropdown-item" href="/">
+                    Sign Up
+                  </a>
+                </div>
+
               </div>
             </li>
           </ul>
