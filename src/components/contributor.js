@@ -4,7 +4,7 @@ import ContributorMenuBar from './contributorMenuBar';
 import ContributorLogin from "./contributorLogin";
 import ContributorSignUp from './contributorSignUp';
 import contributorDashboard from "./contributorDashboard";
- HomeScreenBranche
+ //HomeScreenBranche
 import HomeScreenComponent from "./HomeScreenComponent";
 
 import ResetPassword from "./forgotPassword";
