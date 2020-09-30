@@ -1,42 +1,42 @@
 import React from "react";
-import { nav } from "react-bootstrap";
+import { nav,a } from "react-bootstrap";
 import "../dashboard.css";
 
 function AsideNav() {
   return (
     <nav
-      classNameName="asideNav col-3 px-5 pt-3"
+      className="asideNav col-3 px-5 pt-3"
       style={{ background: "#344127" }}
     >
-      <div classNameName="container text-left">
-        <a classNameName="h2 text-white Aside-title" href="/">
+      <div className="container text-left">
+        <a className="h2 text-white Aside-title" href="/">
           <img src="images/onboard_menu_icon.svg" alt="" /> Open Data
         </a>
 
-        <ul classNameName="navbar-nav mt-5 ">
-          <li classNameName="nav-item active">
-            <a href="/" classNameName="nav-link h4">
-              <i classNameName="fas fa-home mr-2"></i> Dashboard
+        <ul className="navbar-nav mt-5 ">
+          <li className="nav-item active">
+            <a href="/" className="nav-link h4">
+              <i className="fas fa-home mr-2"></i> Dashboard
             </a>
           </li>
-          <li classNameName="nav-item">
-            <a href="/" classNameName="nav-link h4">
-              <i classNameName="fas fa-chart-line mr-2"></i> Stats
+          <li className="nav-item">
+            <a href="/" className="nav-link h4">
+              <i className="fas fa-chart-line mr-2"></i> Stats
             </a>
           </li>
-          <li classNameName="nav-item">
-            <a href="/" classNameName="nav-link h4">
-              <i classNameName="fas fa-info-circle mr-2"></i> Information
+          <li className="nav-item">
+            <a href="/" className="nav-link h4">
+              <i className="fas fa-info-circle mr-2"></i> Information
             </a>
           </li>
-          <li classNameName="nav-item">
-            <a href="/" classNameName="nav-link h4">
-              <i classNameName="fas fa-cloud-upload-alt mr-2"></i> Uploads
+          <li className="nav-item">
+            <a href="/" className="nav-link h4">
+              <i className="fas fa-cloud-upload-alt mr-2"></i> Uploads
             </a>
           </li>
-          <li classNameName="nav-item">
-            <a href="/" classNameName="nav-link h4">
-              <i classNameName="far fa-comment-alt mr-2"></i> Contact Us
+          <li className="nav-item">
+            <a href="/" className="nav-link h4">
+              <i className="far fa-comment-alt mr-2"></i> Contact Us
             </a>
           </li>
         </ul>
@@ -61,7 +61,7 @@ function Container() {
             </li>
             <li>
               <a
-                classNameName="border-dark btn btn-outline-light text-dark px-4 py-0"
+                className="border-dark btn btn-outline-light text-dark px-4 py-0"
                 href="/"
               >
                 Level 1
@@ -90,7 +90,7 @@ function Container() {
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-              ></a>
+              >.</a>
 
               <div
                 className="dropdown-menu"
@@ -316,7 +316,7 @@ function Container() {
 
 function Dashboard() {
   return (
-    <div classNameName="row">
+    <div className="row">
       <AsideNav />
       <Container />
     </div>
