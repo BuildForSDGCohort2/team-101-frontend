@@ -1,0 +1,33 @@
+.nav-left {
+  background: #344127;
+}
+
+.row .asideNav .container .Aside-title:hover {
+  text-decoration: none;
+}
+
+.asideNav .nav-link {
+  color: #f9d48e;
+}
+
+.asideNav .nav-link:hover {
+  color: #fff;
+}
+
+.btn4 {
+  border: 5px solid #fff;
+  border-radius: 2px;
+  font-size: 20px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.OdaSection .card-body {
+  background-color: #bd8e39;
+}
+
+.active {
+  color: #fff;
+}
