@@ -1,0 +1,25 @@
+h1 {
+  color: #344127;
+}
+
+.btn_subscripte {
+  background: #f9d48e;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.btn_subscripte:hover {
+  background: #f9d38ee3;
+}
+
+.btnClr {
+  background: #344127;
+  color: #fff;
+  font-size: 1.4rem;
+  transition: 0.3s all ease-in-out;
+}
+
+.btnClr:hover {
+  color: #fff;
+  background: #344127e8;
+}
