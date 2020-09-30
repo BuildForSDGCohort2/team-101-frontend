@@ -23,6 +23,13 @@
   background-color: #fff;
 }
 
+.landingpage-bg{
+  width: 100%;
+  height: 35em;
+  background-image: url("../images/landing-bg.svg") ;
+  background-size: 100%;
+  color: #fff;
+}
 
 @media screen and (max-width: 360px){
 	.nav-bg{
@@ -37,3 +44,50 @@
   }
 }
 
+/* landing page video slider content */
+
+.awssld__content > img, .awssld__content > video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid;
+  border-radius: 5px;
+
+}
+
+.landingpage-nav-bg{
+  background-color: #000;
+  color: #fff;
+}
+
+.landingpage-textone{
+  font-family: Montserrat;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.landingpage-texttwo{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 0.2em;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.outercontainer{ 
+  position:relative 
+}
+
+.innercontainer{ 
+  display: flex;
+  align-items: center; 
+}
