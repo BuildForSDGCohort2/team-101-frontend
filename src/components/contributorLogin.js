@@ -6,6 +6,7 @@ import {Form} from "react-bootstrap";
 import {Button} from "react-bootstrap";
 import {Formik} from "formik";
 import * as yup from "yup";
+import {Link } from "react-router-dom";
 
 const schema = yup.object({
   
@@ -99,8 +100,8 @@ export default function ContributorLogin (props){
         disabled={isSubmitting}>
     Login
   </Button>
-  <a href ="/reset-password"> Forgot your password?</a>
-</Form>
+  <Link to ="/reset-password"><a href ="/reset-password"> Forgot your password?</a>
+</Link></Form>
 )}
     </Formik>
 </Col>
