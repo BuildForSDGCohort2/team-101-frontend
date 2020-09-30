@@ -1,13 +1,10 @@
 import React from "react";
-import { nav,a } from "react-bootstrap";
+import { nav } from "react-bootstrap";
 import "../dashboard.css";
 
 function AsideNav() {
   return (
-    <nav
-      className="asideNav col-3 px-5 pt-3"
-      style={{ background: "#344127" }}
-    >
+    <nav className="asideNav col-3 px-5 pt-3" style={{ background: "#344127" }}>
       <div className="container text-left">
         <a className="h2 text-white Aside-title" href="/">
           <img src="images/onboard_menu_icon.svg" alt="" /> Open Data
@@ -47,17 +44,17 @@ function AsideNav() {
 
 function Container() {
   return (
-    <main className="col-9">
-      <div className="container">
-        <header className="container d-flex justify-content-between px-0 pt-3">
+    <main class="col-9">
+      <div class="container">
+        <header class="container d-flex justify-content-between px-0 pt-3">
           <div>
-            <a href="/" className="nav-left nav-link text-white">
-              <i className="fas fa-upload mr-2"></i>Upload Dataset
+            <a href="/" class="nav-left nav-link text-white">
+              <i class="fas fa-upload mr-2"></i>Upload Dataset
             </a>
           </div>
-          <ul className="nav-right d-flex navbar-nav flex-row">
-            <li className="nav-item px-3">
-              <i className="far fa-bell"></i> 2
+          <ul class="nav-right d-flex navbar-nav flex-row">
+            <li class="nav-item px-3">
+              <i class="far fa-bell"></i> 2
             </li>
             <li>
               <a
@@ -68,51 +65,44 @@ function Container() {
               </a>
             </li>
 
-            <li className="nav-item px-3">
-              <a href="/" className="nav-link py-0">
+            <li class="nav-item pl-3 pr-1">
+              <a href="/" class="nav-link text-dark py-0">
                 <img
-                  className="img-fluid rounded-circle"
-                  width="20"
-                  height="10"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRMdVmNPFIXw0viVx_1ikpgYWNaEvKVPdKcg&usqp=CAU"
+                  class="img-fluid rounded-circle pr-2"
+                  width="30"
+                  height="30"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTUwjB_JQ42cHVQHw6eWFp882_4okQmwCJxPA&usqp=CAU"
                   alt=""
                 />
                 Johnvibe104
               </a>
             </li>
 
-            <li className="dropdown show nav-item px-3">
-              <a
-                className="dropdown-toggle"
-                href="/"
-                role="button"
-                id="dropdownMenuLink"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >.</a>
-
-              <div
-                className="dropdown-menu"
-                aria-labelledby="dropdownMenuLink"
-              >
-                <a className="dropdown-item" href="/">
-                  Action
-                </a>
-                <a className="dropdown-item" href="/">
-                  Another action
-                </a>
-                <a className="dropdown-item" href="/">
-                  Something else here
-                </a>
+            <li class="nav-item pr-3">
+              <div class="dropdown mr-1">
+                <button
+                  type="button"
+                  class="dropdown-toggle border-0 bg-transparent"
+                  id="dropdownMenuOffset"
+                  data-toggle="dropdown"
+                  data-offset="10,20"
+                ></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                  <a class="dropdown-item" href="/">
+                    Log in
+                  </a>
+                  <a class="dropdown-item" href="/">
+                    Sign Up
+                  </a>
+                </div>
               </div>
             </li>
           </ul>
         </header>
-        <section className="mt-5">
-          <div className="card" style={{ background: "#344127" }}>
-            <div className="card-body text-white">
-              <h5 className="font-weight-normal">
+        <section class="mt-5">
+          <div class="card" style={{ background: "#344127" }}>
+            <div class="card-body text-white">
+              <h5 class="font-weight-normal">
                 Welcome John Vibe <br />
                 <br />
                 We are glad to have you as a contributor to Open Data for Africa
@@ -121,187 +111,181 @@ function Container() {
                 <br />
                 <br />
                 If you have any abouts how to upload your first dataset,
-                <a className="d-inline btn_ClickHere" href="/">
+                <a class="d-inline btn_ClickHere" href="/">
                   click here.
                 </a>
               </h5>
             </div>
           </div>
         </section>
-        <section className="mt-5 text-white OdaSection">
+        <section class="mt-5 text-white OdaSection">
           <h1 style={{ color: "#344127" }}>Trending Categories</h1>
-          <h5 className="py-2" style={{ color: "#344127" }}>
+          <h5 class="py-2" style={{ color: "#344127" }}>
             Our recommendations of datasets that are getting most searches...
           </h5>
 
           <div
             id="recipeCarousel"
-            className="carousel slide w-100"
+            class="carousel slide w-100"
             data-ride="carousel"
           >
-            <div className="carousel-inner w-100" role="listbox">
-              <div className="carousel-item row no-gutters active">
-                <div className="col-3 float-left">
-                  <div className="card mb-2 mx-3">
-                    <div className="card-body">
+            <div class="carousel-inner w-100" role="listbox">
+              <div class="carousel-item row no-gutters active">
+                <div class="col-3 float-left">
+                  <div class="card mb-2 mx-3">
+                    <div class="card-body">
                       <img
                         src="images/dashboard-svg/Doctor-amico.svg"
                         alt=""
-                        className="card-img-top"
+                        class="card-img-top"
                       />
-                      <h5 className="card-title text-white text-center">
+                      <h5 class="card-title text-white text-center">
                         Health Care
                       </h5>
                     </div>
                   </div>
                 </div>
-                <div className="col-3 float-left">
-                  <div className="card mb-2 mx-3">
-                    <div className="card-body">
+                <div class="col-3 float-left">
+                  <div class="card mb-2 mx-3">
+                    <div class="card-body">
                       <img
                         src="images/dashboard-svg/Farmer-amico.svg"
                         alt=""
-                        className="card-img-top"
+                        class="card-img-top"
                       />
-                      <h5 className="card-title text-white text-center">
+                      <h5 class="card-title text-white text-center">
                         Agriculture
                       </h5>
                     </div>
                   </div>
                 </div>
-                <div className="col-3 float-left">
-                  <div className="card mb-2 mx-3">
-                    <div className="card-body">
+                <div class="col-3 float-left">
+                  <div class="card mb-2 mx-3">
+                    <div class="card-body">
                       <img
                         src="images/dashboard-svg/House_searching-bro.svg"
                         alt=""
-                        className="card-img-top"
+                        class="card-img-top"
                       />
-                      <h5 className="card-title text-white text-center">
-                        Housing
-                      </h5>
+                      <h5 class="card-title text-white text-center">Housing</h5>
                     </div>
                   </div>
                 </div>
-                <div className="col-3 float-left">
-                  <div className="card mb-2 mx-3">
-                    <div className="card-body">
+                <div class="col-3 float-left">
+                  <div class="card mb-2 mx-3">
+                    <div class="card-body">
                       <img
                         src="images/dashboard-svg/Farmer-amico.svg"
                         alt=""
-                        className="card-img-top"
+                        class="card-img-top"
                       />
-                      <h5 className="card-title text-white text-center">
+                      <h5 class="card-title text-white text-center">
                         Agriculture
                       </h5>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="carousel-item row no-gutters">
-                <div className="col-3 float-left">
-                  <div className="card mb-2 mx-3">
-                    <div className="card-body">
+              <div class="carousel-item row no-gutters">
+                <div class="col-3 float-left">
+                  <div class="card mb-2 mx-3">
+                    <div class="card-body">
                       <img
                         src="images/dashboard-svg/Doctor-amico.svg"
                         alt=""
-                        className="card-img-top"
+                        class="card-img-top"
                       />
-                      <h5 className="card-title text-white text-center">
+                      <h5 class="card-title text-white text-center">
                         Health Care
                       </h5>
                     </div>
                   </div>
                 </div>
-                <div className="col-3 float-left">
-                  <div className="card mb-2 mx-3">
-                    <div className="card-body">
+                <div class="col-3 float-left">
+                  <div class="card mb-2 mx-3">
+                    <div class="card-body">
                       <img
                         src="images/dashboard-svg/House_searching-bro.svg"
                         alt=""
-                        className="card-img-top"
+                        class="card-img-top"
                       />
-                      <h5 className="card-title text-white text-center">
-                        Housing
-                      </h5>
+                      <h5 class="card-title text-white text-center">Housing</h5>
                     </div>
                   </div>
                 </div>
-                <div className="col-3 float-left">
-                  <div className="card mb-2 mx-3">
-                    <div className="card-body">
+                <div class="col-3 float-left">
+                  <div class="card mb-2 mx-3">
+                    <div class="card-body">
                       <img
                         src="images/dashboard-svg/Farmer-amico.svg"
                         alt=""
-                        className="card-img-top"
+                        class="card-img-top"
                       />
-                      <h5 className="card-title text-white text-center">
+                      <h5 class="card-title text-white text-center">
                         Agriculture
                       </h5>
                     </div>
                   </div>
                 </div>
-                <div className="col-3 float-left">
-                  <div className="card mb-2 mx-3">
-                    <div className="card-body">
+                <div class="col-3 float-left">
+                  <div class="card mb-2 mx-3">
+                    <div class="card-body">
                       <img
                         src="images/dashboard-svg/House_searching-bro.svg"
                         alt=""
-                        className="card-img-top"
+                        class="card-img-top"
                       />
-                      <h5 className="card-title text-white text-center">
-                        Housing
-                      </h5>
+                      <h5 class="card-title text-white text-center">Housing</h5>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <a
-              className="carousel-control-prev"
+              class="carousel-control-prev"
               href="#recipeCarousel"
               role="button"
               data-slide="prev"
             >
               <span
-                className="carousel-control-prev-icon"
+                class="carousel-control-prev-icon"
                 aria-hidden="true"
               ></span>
-              <span className="sr-only">Previous</span>
+              <span class="sr-only">Previous</span>
             </a>
             <a
-              className="carousel-control-next"
+              class="carousel-control-next"
               href="#recipeCarousel"
               role="button"
               data-slide="next"
             >
               <span
-                className="carousel-control-next-icon"
+                class="carousel-control-next-icon"
                 aria-hidden="true"
               ></span>
-              <span className="sr-only">Next</span>
+              <span class="sr-only">Next</span>
             </a>
           </div>
         </section>
 
-        <section className="my-5">
+        <section class="my-5">
           <h1 style={{ color: "#344127" }}>ODA Digest</h1>
           <div
-            className="card py-5 mt-5"
+            class="card py-5 mt-5"
             style={{
               background:
                 "linear-gradient(178.18deg,rgba(249, 212, 142, 0.9) -13.56%,rgba(52, 65, 39, 0.9) -13.56%,rgba(249, 212, 142, 0.9) 158.3%)",
             }}
           >
-            <div className="card-body text-white text-center">
-              <h5 className="h4">
+            <div class="card-body text-white text-center">
+              <h5 class="h4">
                 We have decided to share our stories to the world , join us on
                 June 01 2020 as we launch the converse conversation with Joe
                 Rogan and peter Thiel.
               </h5>
               <button
                 type="button"
-                className="btn btn-outline-light mt-3 text-white"
+                class="btn btn-outline-light mt-3 text-white"
                 style={{ fontSize: "25px" }}
               >
                 Learn More
