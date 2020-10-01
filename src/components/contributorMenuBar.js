@@ -11,14 +11,14 @@ return (
                     
                   
 <nav className="navbar navbar-expand-lg nav-bg ">
- <Link to ="/">
-  <a 
+ <Link to ="/home"
+   
     className="navbar-brand" 
-    href ="/">
+    >
   <img src="images/onboard_menu_icon.svg" alt ="onboard_menu_icon"/>
                     <span className ="brandAfriData">Open Data</span>
          
-  </a></Link>
+  </Link>
   <button 
       className="navbar-toggler" 
       type="button" 
@@ -31,6 +31,12 @@ return (
 
   <div className="collapse navbar-collapse  " id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto nav-items nav-bg   ">
+
+     <Link className ="#" to ="/contributors">
+    <li className="nav-item ">
+        <a className="nav-link noDecorationMenu" href="/catalog">Contribute<span className="sr-only">(current)</span></a>
+      </li></Link>
+     
 
      <Link className ="#" to ="/catalog">
     <li className="nav-item ">
@@ -56,6 +62,11 @@ return (
        <Link to ="/datasets"> 
      <li className="nav-item">
         <a className="nav-link noDecorationMenu" href="/datasets">Datasets</a>
+      </li>
+      </Link>
+       <Link to ="/dashboard"> 
+     <li className="nav-item">
+        <a className="nav-link noDecorationMenu" href="/datasets">Dashboard</a>
       </li>
       </Link>
        

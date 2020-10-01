@@ -1,6 +1,7 @@
 import React from 'react';
 import Contributor from "./components/contributor";
-import {BrowserRouter as Router,Switch, Route} from "react-router-dom";
+import LandingPage from "./components/landingpage";
+import {BrowserRouter as Router,Switch, Route, Redirect} from "react-router-dom";
 import "./App.css";
 
 
@@ -10,11 +11,14 @@ function App() {
     <div className="App">
         <Router>
              <Switch>
-            	  <Route path ="/" exact>
-            	    <Contributor/>
+            	  <Route exact path ="/" >
+                   <Redirect to ="/home" />
+            	    
             	  </Route>
+                <Route exact path ="/home"><LandingPage/></Route>
       	 
-              
+               <Route exact path ="/contributors"> <Contributor/> </Route>
+
             </Switch>
         </Router>   
     </div>

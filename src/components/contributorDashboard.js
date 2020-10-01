@@ -1,5 +1,6 @@
 import React from "react";
 import { nav } from "react-bootstrap";
+import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "../dashboard.css";
 
 function AsideNav() {
@@ -12,29 +13,29 @@ function AsideNav() {
 
         <ul className="navbar-nav mt-5 ">
           <li className="nav-item active">
-            <a href="/" className="nav-link h4">
+             <Link to="/dashboard" className="nav-link h4">
               <i className="fas fa-home mr-2"></i> Dashboard
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="/" className="nav-link h4">
+             <Link to="/dashboard/stats" className="nav-link h4">
               <i className="fas fa-chart-line mr-2"></i> Stats
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="/" className="nav-link h4">
+             <Link to="/dashboard/information"className="nav-link h4">
               <i className="fas fa-info-circle mr-2"></i> Information
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="/" className="nav-link h4">
+            <Link to="/dashboard/uploads" className="nav-link h4">
               <i className="fas fa-cloud-upload-alt mr-2"></i> Uploads
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="/" className="nav-link h4">
+             <Link to="/dashboard/contactus" className="nav-link h4">
               <i className="far fa-comment-alt mr-2"></i> Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -48,9 +49,9 @@ function Container() {
       <div class="container">
         <header class="container d-flex justify-content-between px-0 pt-3">
           <div>
-            <a href="/" class="nav-left nav-link text-white">
+            <Link class="nav-left nav-link text-white" to ="/dashboard/uploads">
               <i class="fas fa-upload mr-2"></i>Upload Dataset
-            </a>
+            </Link>
           </div>
           <ul class="nav-right d-flex navbar-nav flex-row">
             <li class="nav-item px-3">
@@ -71,7 +72,7 @@ function Container() {
                   class="img-fluid rounded-circle"
                   width="20"
                   height="10"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRMdVmNPFIXw0viVx_1ikpgYWNaEvKVPdKcg&usqp=CAU"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRMdVmNPFIXw0viVx_1ikpgYWNaEvKVPdKcg&usqp=CAU"/>
 
             <li class="nav-item pl-3 pr-1">
               <a href="/" class="nav-link text-dark py-0">
@@ -132,7 +133,7 @@ function Container() {
 
               </div>
             </li>
-          </ul>
+          </div> </li></a> </li></ul>
         </header>
         <section class="mt-5">
           <div class="card" style={{ background: "#344127" }}>
@@ -333,11 +334,93 @@ function Container() {
   );
 }
 
+function Uploads(){
+
+  return (
+    <main class="col-9">
+      <div class="container">
+        <section class="mt-5">
+          <div class="card" style={{ background: "#344127" }}>
+          <div class="card-body text-white">
+        <div>Upload</div>
+         </div> </div></section>
+      </div>
+    </main>
+    );
+}
+function Stats(){
+
+  return (
+    <main class="col-9">
+      <div class="container">
+         <section class="mt-5">
+          <div class="card" style={{ background: "#344127" }}>
+          <div class="card-body text-white">
+        <div>Stats</div> 
+
+        </div></div>
+        </section>
+      </div>
+    </main>
+    );
+}
+function Information(){
+
+  return (
+    <main class="col-9">
+      <div class="container">
+        <section class="mt-5">
+          <div class="card" style={{ background: "#344127" }}>
+          <div class="card-body text-white">
+          <div>Information</div> 
+
+              </div></div>
+          </section>
+      </div>
+    </main>
+    );
+}
+function ContactUs(){
+
+  return (
+    <main class="col-9">
+      <div class="container">
+       <section class="mt-5">
+          <div class="card" style={{ background: "#344127" }}>
+          <div class="card-body text-white">
+           <div>Contact Us</div> 
+
+           </div></div>
+
+           </section>
+      </div>
+    </main>
+    );
+}
 function Dashboard() {
   return (
     <div className="row">
+    <Router>
+
       <AsideNav />
+      <Switch>
+      <Route exact path ="/dashboard/">
       <Container />
+      </Route>
+       <Route exact path ="/dashboard/stats">
+      <Stats/>
+      </Route>
+      <Route exact path ="/dashboard/uploads">
+      <Uploads/>
+      </Route>
+      <Route exact path ="/dashboard/contactus">
+      <ContactUs/>
+      </Route>
+      <Route exact path ="/dashboard/information">
+      <Information/>
+       </Route>
+       </Switch>
+      </Router>
     </div>
   );
 }
