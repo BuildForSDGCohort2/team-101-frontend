@@ -1,0 +1,26 @@
+.search_icon {
+    position: relative;
+    right: 3rem;
+    font-size: 20px;
+}
+.nav-scrolspy a {
+    color: #344127;
+    font-size: 1.5rem;
+    padding-top:10px ;
+    padding-bottom: 10px;
+}
+
+.actived {
+    border-bottom: 5px solid #344127;
+}
+
+.btn-next {
+    background:  #344127;
+    padding: 10px 100px;
+    margin: 20px 0;
+    color: #fff;
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: .5rem;
+    float: right;
+}
