@@ -30,6 +30,7 @@ function HomePageTop() {
                     class="img-fluid rounded-circle"
                     width="20"
                     height="10"
+                    alt="User-IMG"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRMdVmNPFIXw0viVx_1ikpgYWNaEvKVPdKcg&usqp=CAU"/>
   
               <li class="nav-item pl-3 pr-1">

@@ -7,7 +7,7 @@ import contributorDashboard from "./contributorDashboard";
  //HomeScreenBranche
 import HomeScreenComponent from "./HomeScreenComponent";
 import LandingPage from "./landingpage";
-import HomePageComponent from "./homePageLeftComponent";
+import HomePageComponent from "./homePageComponent";
 import ResetPassword from "./forgotPassword";
 import Footer from "./footer";
 
@@ -27,7 +27,7 @@ export default function Contributor(props){
 				</Route>
 				<Route exact path ="/reset-password">
 					<ResetPassword/>
-                //HomeScreenBranche
+                {/* //HomeScreenBranche */}
 
 				</Route>
 				
@@ -35,7 +35,8 @@ export default function Contributor(props){
 					
 				</Route>
 
-				<Route exact path="/homepage"  component={HomePageComponent} ></Route>
+				<Route exact path="/homepage"  component={HomePageComponent} >
+				</Route>
 
 				<Route exact path="/contributors" component={HomeScreenComponent}></Route>
 

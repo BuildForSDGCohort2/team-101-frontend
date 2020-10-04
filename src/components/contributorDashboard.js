@@ -72,6 +72,7 @@ function Container() {
                   class="img-fluid rounded-circle"
                   width="20"
                   height="10"
+                  alt="UserIMG"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRMdVmNPFIXw0viVx_1ikpgYWNaEvKVPdKcg&usqp=CAU"/>
 
             <li class="nav-item pl-3 pr-1">
