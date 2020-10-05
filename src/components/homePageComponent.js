@@ -2,7 +2,7 @@ import React from "react";
 import HomePageTop from "./homePageTopComponent";
 import HomePageBody from "./homePageBodyComponent";
 import HomePageLeftComponent from "./homePageLeftComponent";
-import "../stylesheets/homePage.css"
+import "../stylesheets/homePage.css";
 
 function HomePageComponent() {
   return (
