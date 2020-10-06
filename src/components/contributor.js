@@ -1,20 +1,29 @@
-import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import React, { useState } from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import ContributorMenuBar from './contributorMenuBar';
 import ContributorLogin from "./contributorLogin";
 import ContributorSignUp from './contributorSignUp';
 import contributorDashboard from "./contributorDashboard";
+import { AuthContext } from "../context/auth";
+import PrivateRoute from "../privateroute";
  //HomeScreenBranche
 import HomeScreenComponent from "./HomeScreenComponent";
-import LandingPage from "./landingpage";
-
 import ResetPassword from "./forgotPassword";
 import Footer from "./footer";
 
 
 export default function Contributor(props){
 
+ //const existingTokens = JSON.parse(localStorage.getItem("tokens"));
+  const [authTokens, setAuthTokens] = useState();
+  
+  const setTokens = (data) => {
+    localStorage.setItem("tokens", JSON.stringify(data));
+    setAuthTokens(data);
+  };
+
 	return(
+		<AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
 		<Router>
 			
 			<ContributorMenuBar/>
@@ -27,13 +36,13 @@ export default function Contributor(props){
 				</Route>
 				<Route exact path ="/reset-password">
 					<ResetPassword/>
-                //HomeScreenBranche
+               
 
 				</Route>
 				
-				<Route exact path ="/dashboard"  component={contributorDashboard}>
+				<PrivateRoute  path ="/dashboard"  component={contributorDashboard}/>
 					
-				</Route>
+				
 				<Route exact path="/contributors" component={HomeScreenComponent}></Route>
 
 				
@@ -45,5 +54,6 @@ export default function Contributor(props){
 			<Footer/>
 
 		</Router>
+		</AuthContext.Provider>
 		);
 }

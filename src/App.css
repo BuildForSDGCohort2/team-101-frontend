@@ -163,3 +163,7 @@ a.noDecorationFooter {
 .awssld__bullets button {
   background-color: #fff;
 }
+
+.error-color {
+  color: red;
+}

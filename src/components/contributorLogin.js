@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Container} from "react-bootstrap";
 import { Row} from "react-bootstrap";
 import {Col} from "react-bootstrap";
@@ -6,7 +6,8 @@ import {Form} from "react-bootstrap";
 import {Button} from "react-bootstrap";
 import {Formik} from "formik";
 import * as yup from "yup";
-import {Link } from "react-router-dom";
+import {Link, Redirect } from "react-router-dom";
+import { useAuth } from "../context/auth";
 
 const schema = yup.object({
   
@@ -15,7 +16,21 @@ const schema = yup.object({
   password: yup.string().required(),
  });
 
+
 export default function ContributorLogin (props){
+
+  
+  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const { setAuthTokens } = useAuth();
+
+
+        if(isLoggedIn){
+
+          return <Redirect push to={{ pathname: "/dashboard"}} />;
+        }
+
+      else{
 	return(
 <Container className ="onboard-bottom-margin">
   <Row>
@@ -32,10 +47,52 @@ export default function ContributorLogin (props){
     <Formik
       validationSchema={schema}
       onSubmit={(values, { setSubmitting }) => {
-         setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
-           setSubmitting(false);
-         }, 400);
+         
+          
+         const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values)};
+
+        const corsUrl = "https://secure-ravine-92476.herokuapp.com/";
+        const url   = "https://afrida.herokuapp.com/api/auth/login/";
+
+
+
+    fetch(corsUrl +url, requestOptions)
+        .then(async (response) => {
+            const data = await response.json();
+
+            // check for error response
+            if (!response.ok) {
+                // get error message from body or default to response status
+                const error = (data && data.message) || response.status;
+                setIsError(true);
+                return Promise.reject(error);
+            }
+            return data;
+            
+        }).then((data) =>{
+            
+             setAuthTokens(data.access_token);
+              }).then((data) => { setLoggedIn(true);})
+        .catch((error) => {
+            console.error('There was an error!', error);
+        });
+        setSubmitting(false);
+
+
+
+
+
+
+
+
+
+
+
+           
+         
        }}
       initialValues={{
         
@@ -59,7 +116,7 @@ export default function ContributorLogin (props){
     <Form.Control 
         size="lg" 
         type="email" 
-        placeholder="Username/Email Address" 
+        placeholder="Email Address" 
         className = "onboard-top-margin"
         name ="email"
         value={values.email}
@@ -93,9 +150,9 @@ export default function ContributorLogin (props){
     <Form.Control.Feedback></Form.Control.Feedback>
   </Form.Group>
 
-  
+   {isError && (<span className ="error-color">Email or password is incorrect</span>)}
   <Button 
-      variant="secondary afriDataButton" size="lg" block 
+      variant="secondary " size="lg" block 
        type="submit" className ="onboard-top-margin"
         disabled={isSubmitting}>
     Login
@@ -110,4 +167,4 @@ export default function ContributorLogin (props){
   </Row>
 </Container>
 );
-}
+}}
