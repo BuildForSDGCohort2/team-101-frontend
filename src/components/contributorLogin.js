@@ -72,12 +72,12 @@ export default function ContributorLogin (props){
             }
             return data;
             
-        }).then((data) =>{
+        }).then((data) => {
             
              setAuthTokens(data.access_token);
               }).then((data) => { setLoggedIn(true);})
         .catch((error) => {
-            console.error('There was an error!', error);
+            setIsError(true);
         });
         setSubmitting(false);
 

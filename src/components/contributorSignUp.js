@@ -16,7 +16,7 @@ const schema = yup.object({
   email: yup.string().email().required(),
   username: yup.string().required(),
   password1: yup.string().required().min(8,"minimium of 8 characters"),
-  password2: yup.string().oneOf([yup.ref('password1'), null],'password must match'),
+  password2: yup.string().oneOf([yup.ref("password1"), null],"password must match"),
   town_city: yup.string().required().min(2,"minimium of 2 characters").max(20,"maximum of 20 characters"),
   state: yup.string().required().min(2,"minimium of 2 characters").max(20,"maximum of 20 characters"),
 });
@@ -25,11 +25,12 @@ const schema = yup.object({
 
 export default function ContributorSignUp (props){
   const [isRegistered, setRegistered] = useState(false); 
+  const [isError, setIsError] = useState(false);
 
   if(isRegistered){
     return <Redirect push to = {{pathname:"/login"}} />;
   }
- else
+ else{
   return(
 <Container className ="onboard-bottom-margin">
   <Row>
@@ -46,8 +47,8 @@ export default function ContributorSignUp (props){
       onSubmit={(values, { setSubmitting }) => {
 
       const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values)};
 
         const corsUrl = "https://secure-ravine-92476.herokuapp.com/";
@@ -69,7 +70,7 @@ export default function ContributorSignUp (props){
         }).then((data) => {setRegistered(true);})
         .catch((error) => {
             
-            console.error('There was an error!', error);
+            setIsError(true);
         });
            setSubmitting(false);
          }, 10000);
@@ -353,4 +354,4 @@ export default function ContributorSignUp (props){
   </Row>
 </Container>
 );
-}
+}}
