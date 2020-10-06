@@ -27,10 +27,10 @@ export default function ContributorLogin (props){
 
         if(isLoggedIn){
 
-          return <Redirect push to={{ pathname: '/dashboard'}} />
+          return <Redirect push to={{ pathname: "/dashboard"}} />;
         }
 
-      else
+      else{
 	return(
 <Container className ="onboard-bottom-margin">
   <Row>
@@ -50,8 +50,8 @@ export default function ContributorLogin (props){
          
           
          const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values)};
 
         const corsUrl = "https://secure-ravine-92476.herokuapp.com/";
@@ -167,4 +167,4 @@ export default function ContributorLogin (props){
   </Row>
 </Container>
 );
-}
+}}

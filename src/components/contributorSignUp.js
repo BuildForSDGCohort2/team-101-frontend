@@ -256,7 +256,7 @@ export default function ContributorSignUp (props){
         value={values.country}
         onChange={handleChange}
         onBlur={handleBlur}
-        style={{ display: 'block' }}
+        style={{ display: "block" }}
       >
         <option value="" label="Select a country" />
         

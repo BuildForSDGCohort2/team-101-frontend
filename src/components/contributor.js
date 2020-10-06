@@ -5,7 +5,7 @@ import ContributorLogin from "./contributorLogin";
 import ContributorSignUp from './contributorSignUp';
 import contributorDashboard from "./contributorDashboard";
 import { AuthContext } from "../context/auth";
-import PrivateRoute from '../privateroute';
+import PrivateRoute from "../privateroute";
  //HomeScreenBranche
 import HomeScreenComponent from "./HomeScreenComponent";
 import ResetPassword from "./forgotPassword";
@@ -20,7 +20,7 @@ export default function Contributor(props){
   const setTokens = (data) => {
     localStorage.setItem("tokens", JSON.stringify(data));
     setAuthTokens(data);
-  }
+  };
 
 	return(
 		<AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
