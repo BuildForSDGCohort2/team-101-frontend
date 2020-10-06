@@ -334,7 +334,7 @@ export default function ContributorSignUp (props){
 
 
 
-
+    {isError && (<span className ="error-color">There was an error, try again</span>)}
       
       <Button 
       variant="secondary afriDataButton " 
