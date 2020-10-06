@@ -55,7 +55,7 @@ export default function ContributorSignUp (props){
 
          setTimeout(() => {
            fetch(corsUrl +url , requestOptions)
-        .then(async response => {
+        .then(async (response) => {
             const data = await response.json();
 
             // check for error response
@@ -66,8 +66,8 @@ export default function ContributorSignUp (props){
             }
 
           return data; 
-        }).then(data =>{setRegistered(true);})
-        .catch(error => {
+        }).then((data) => {setRegistered(true);})
+        .catch((error) => {
             
             console.error('There was an error!', error);
         });

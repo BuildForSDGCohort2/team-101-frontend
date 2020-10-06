@@ -60,7 +60,7 @@ export default function ContributorLogin (props){
 
 
     fetch(corsUrl +url, requestOptions)
-        .then(async response => {
+        .then(async (response) => {
             const data = await response.json();
 
             // check for error response
@@ -72,11 +72,11 @@ export default function ContributorLogin (props){
             }
             return data;
             
-        }).then(data =>{
+        }).then((data) =>{
             
              setAuthTokens(data.access_token);
-              }).then(data => { setLoggedIn(true);})
-        .catch(error => {
+              }).then((data) => { setLoggedIn(true);})
+        .catch((error) => {
             console.error('There was an error!', error);
         });
         setSubmitting(false);
