@@ -1,9 +1,19 @@
 import React from "react";
 import { nav } from "react-bootstrap";
-import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link, BrowserRouter as Router, Route, Switch,Redirect } from "react-router-dom";
+import { useAuth } from "../context/auth";
 import "../dashboard.css";
 
-function AsideNav() {
+
+function AsideNav(props) {
+  
+  const { setAuthTokens } = useAuth();
+  function logOut() {
+
+    setAuthTokens();
+    return <Redirect push to={{pathname:"/login"}}/>;
+  }
+  
   return (
     <nav className="asideNav col-3 px-5 pt-3" style={{ background: "#344127" }}>
       <div className="container text-left">
@@ -36,6 +46,13 @@ function AsideNav() {
              <Link to="/dashboard/contactus" className="nav-link h4">
               <i className="far fa-comment-alt mr-2"></i> Contact Us
             </Link>
+          </li>
+
+          <li className="nav-item">
+             <div>
+     
+        <input type ="button" onClick={logOut} value ="Log out" />
+             </div>
           </li>
         </ul>
       </div>
@@ -72,6 +89,7 @@ function Container() {
                   class="img-fluid rounded-circle"
                   width="20"
                   height="10"
+                  alt =" "
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRMdVmNPFIXw0viVx_1ikpgYWNaEvKVPdKcg&usqp=CAU"/>
 
             <li class="nav-item pl-3 pr-1">
@@ -98,7 +116,7 @@ function Container() {
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-              ></a>
+              >action</a>
 
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="/">
@@ -397,7 +415,8 @@ function ContactUs(){
     </main>
     );
 }
-function Dashboard() {
+function Dashboard(props) {
+    
   return (
     <div className="row">
     <Router>
