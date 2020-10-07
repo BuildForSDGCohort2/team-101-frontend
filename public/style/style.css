@@ -42,6 +42,7 @@
 	.homeage-zindex{
 		z-index: 
   }
+  
 }
 
 /* landing page video slider content */
@@ -91,3 +92,9 @@
   display: flex;
   align-items: center; 
 }
+
+.mobile-menu-bg{
+    background-color:#344127;
+    font-size:28px;
+  }
+  

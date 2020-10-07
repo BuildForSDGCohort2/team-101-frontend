@@ -10,7 +10,7 @@ return (
             
                     
                   
-<nav className="navbar navbar-expand-lg nav-bg ">
+<nav className="navbar navbar-expand-lg nav-bg  ">
  <Link to ="/home"
    
     className="navbar-brand" 
@@ -18,16 +18,17 @@ return (
   <img src="images/onboard_menu_icon.svg" alt ="onboard_menu_icon"/>
                     <span className ="brandAfriData">Open Data</span>
          
-  </Link>
+ </Link>
   <button 
-      className="navbar-toggler" 
-      type="button" 
-      data-toggle="collapse" 
-      data-target="#navbarSupportedContent" 
-      aria-controls="navbarSupportedContent" 
-      aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-  </button>
+          className="navbar-toggler" 
+          type="button" 
+          data-toggle="collapse" 
+          data-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" 
+          aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon btn-secondary">
+            <i className="fas fa-bars mobile-menu-bg"></i></span>
+      </button>
 
   <div className="collapse navbar-collapse  " id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto nav-items nav-bg   ">
