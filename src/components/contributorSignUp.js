@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Container} from "react-bootstrap";
+import {Spinner,Container} from "react-bootstrap";
 import { Row} from "react-bootstrap";
 import {Col} from "react-bootstrap";
 import {Form} from "react-bootstrap";
@@ -26,6 +26,7 @@ const schema = yup.object({
 export default function ContributorSignUp (props){
   const [isRegistered, setRegistered] = useState(false); 
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   if(isRegistered){
     return <Redirect push to = {{pathname:"/login"}} />;
@@ -45,7 +46,7 @@ export default function ContributorSignUp (props){
     <Formik
       validationSchema={schema}
       onSubmit={(values, { setSubmitting }) => {
-
+        setIsLoading(true);
       const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -71,6 +72,7 @@ export default function ContributorSignUp (props){
         .catch((error) => {
             
             setIsError(true);
+            setIsLoading(false);
         });
            setSubmitting(false);
          }, 10000);
@@ -93,6 +95,14 @@ export default function ContributorSignUp (props){
       }) => (
 
     <Form className="center-a-form" onSubmit={handleSubmit}>
+     {isError && (<span className ="error-color">There was an error, try again</span>)}
+    { isLoading && (<Spinner
+      as="span"
+      animation="grow"
+      role="status"
+      aria-hidden="true"
+      variant="info"
+    />)}
      <Form.Group controlId="formBasicFirstName" >
         <Form.Label srOnly> First Name</Form.Label>
         <Form.Control 
@@ -334,7 +344,6 @@ export default function ContributorSignUp (props){
 
 
 
-    {isError && (<span className ="error-color">There was an error, try again</span>)}
       
       <Button 
       variant="secondary afriDataButton " 
