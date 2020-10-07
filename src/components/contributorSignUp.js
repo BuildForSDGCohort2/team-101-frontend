@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Container} from "react-bootstrap";
+import {Spinner,Container} from "react-bootstrap";
 import { Row} from "react-bootstrap";
 import {Col} from "react-bootstrap";
 import {Form} from "react-bootstrap";
@@ -16,7 +16,7 @@ const schema = yup.object({
   email: yup.string().email().required(),
   username: yup.string().required(),
   password1: yup.string().required().min(8,"minimium of 8 characters"),
-  password2: yup.string().oneOf([yup.ref('password1'), null],'password must match'),
+  password2: yup.string().oneOf([yup.ref("password1"), null],"password must match"),
   town_city: yup.string().required().min(2,"minimium of 2 characters").max(20,"maximum of 20 characters"),
   state: yup.string().required().min(2,"minimium of 2 characters").max(20,"maximum of 20 characters"),
 });
@@ -25,11 +25,13 @@ const schema = yup.object({
 
 export default function ContributorSignUp (props){
   const [isRegistered, setRegistered] = useState(false); 
+  const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   if(isRegistered){
     return <Redirect push to = {{pathname:"/login"}} />;
   }
- else
+ else{
   return(
 <Container className ="onboard-bottom-margin">
   <Row>
@@ -44,10 +46,10 @@ export default function ContributorSignUp (props){
     <Formik
       validationSchema={schema}
       onSubmit={(values, { setSubmitting }) => {
-
+        setIsLoading(true);
       const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values)};
 
         const corsUrl = "https://secure-ravine-92476.herokuapp.com/";
@@ -69,7 +71,8 @@ export default function ContributorSignUp (props){
         }).then((data) => {setRegistered(true);})
         .catch((error) => {
             
-            console.error('There was an error!', error);
+            setIsError(true);
+            setIsLoading(false);
         });
            setSubmitting(false);
          }, 10000);
@@ -92,6 +95,14 @@ export default function ContributorSignUp (props){
       }) => (
 
     <Form className="center-a-form" onSubmit={handleSubmit}>
+     {isError && (<span className ="error-color">There was an error, try again</span>)}
+    { isLoading && (<Spinner
+      as="span"
+      animation="grow"
+      role="status"
+      aria-hidden="true"
+      variant="info"
+    />)}
      <Form.Group controlId="formBasicFirstName" >
         <Form.Label srOnly> First Name</Form.Label>
         <Form.Control 
@@ -333,7 +344,6 @@ export default function ContributorSignUp (props){
 
 
 
-
       
       <Button 
       variant="secondary afriDataButton " 
@@ -353,4 +363,4 @@ export default function ContributorSignUp (props){
   </Row>
 </Container>
 );
-}
+}}

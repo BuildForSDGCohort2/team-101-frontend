@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Container} from "react-bootstrap";
-import { Row} from "react-bootstrap";
+import {Spinner, Row} from "react-bootstrap";
 import {Col} from "react-bootstrap";
 import {Form} from "react-bootstrap";
 import {Button} from "react-bootstrap";
@@ -8,6 +8,7 @@ import {Formik} from "formik";
 import * as yup from "yup";
 import {Link, Redirect } from "react-router-dom";
 import { useAuth } from "../context/auth";
+
 
 const schema = yup.object({
   
@@ -23,6 +24,7 @@ export default function ContributorLogin (props){
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [isError, setIsError] = useState(false);
   const { setAuthTokens } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
 
 
         if(isLoggedIn){
@@ -48,7 +50,7 @@ export default function ContributorLogin (props){
       validationSchema={schema}
       onSubmit={(values, { setSubmitting }) => {
          
-          
+          setIsLoading(true);
          const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -72,14 +74,16 @@ export default function ContributorLogin (props){
             }
             return data;
             
-        }).then((data) =>{
+        }).then((data) => {
             
              setAuthTokens(data.access_token);
               }).then((data) => { setLoggedIn(true);})
         .catch((error) => {
-            console.error('There was an error!', error);
+            setIsError(true);
+            setIsLoading(false);
         });
         setSubmitting(false);
+
 
 
 
@@ -111,6 +115,15 @@ export default function ContributorLogin (props){
 
     <Form className="center-a-form" onSubmit={handleSubmit}>
       
+   {isError && (<span className ="error-color">Email or password is incorrect</span>)}
+    { isLoading && (<Spinner
+      as="span"
+      animation="grow"
+      role="status"
+      aria-hidden="true"
+      variant="info"
+    />)}
+    
   <Form.Group controlId="formBasicEmail" >
     <Form.Label srOnly>Username/Email Address</Form.Label>
     <Form.Control 
@@ -149,14 +162,20 @@ export default function ContributorLogin (props){
         {errors.password && touched.password && errors.password}
     <Form.Control.Feedback></Form.Control.Feedback>
   </Form.Group>
-
-   {isError && (<span className ="error-color">Email or password is incorrect</span>)}
-  <Button 
-      variant="secondary " size="lg" block 
+ <Button 
+      variant="secondary afriDataButton " size="lg" block 
        type="submit" className ="onboard-top-margin"
         disabled={isSubmitting}>
     Login
   </Button>
+
+
+
+    
+  
+
+
+
   <Link to ="/reset-password"><a href ="/reset-password"> Forgot your password?</a>
 </Link></Form>
 )}
