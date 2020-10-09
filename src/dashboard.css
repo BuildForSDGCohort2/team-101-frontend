@@ -19,10 +19,32 @@
   border-radius: 2px;
   font-size: 20px;
 }
-
-body {
-  overflow-x: hidden;
+.OdaBtn {
+  font-size: 24px;
 }
+
+/* TOGGLE BUTTON */
+.hamburger {
+  display: none;
+  position: relative;
+  background: transparent;
+  z-index: 2;
+  
+  cursor: pointer;
+  display: none;
+}
+.line {
+  height: 4px;
+  width: 40px;
+  background: #bd8e39;
+  margin-bottom: 5px;
+}
+
+
+
+/* body {
+  overflow-x: hidden;
+} */
 
 .OdaSection .card-body {
   background-color: #bd8e39;
@@ -31,3 +53,59 @@ body {
 .active {
   color: #fff;
 }
+
+
+/*      RESPONSIVE */
+@media only screen and (max-width:1340px) {
+  .Aside-title {
+    font-size: 1.4rem;
+  }
+  .asideNav ul a {
+    font-size: 1rem;
+  }
+ 
+}
+
+@media only screen and (max-width:1010px) {
+  .navbar-toggler  {
+    background: #fff;
+  }
+  .asideNav {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    top: 15px;
+  }
+  .open {
+    display: inline;
+    position: relative;
+    bottom: 40px;
+    padding: 25px 0;
+  }
+  .ml {
+    position: relative;
+    left: 200px;
+  }
+  .navbar-collapse  .navbar-nav li {
+    margin-top: 7px;
+  }
+  .introduct h5{
+    font-size: .8rem;
+  }
+  section h1 {
+    font-size: 1.4rem;
+  }
+  section h5 {
+    font-size: 1rem;
+  }
+  .OdaBtn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+

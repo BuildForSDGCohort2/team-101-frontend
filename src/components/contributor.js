@@ -38,7 +38,7 @@ export default function Contributor(props){
 
 				</Route>
 				
-				<PrivateRoute  path ="/dashboard"  component={contributorDashboard}/>
+				<Route  path ="/dashboard"  component={contributorDashboard}/>
 					
 				
 				<Route exact path="/contributors" component={HomeScreenComponent}></Route>
