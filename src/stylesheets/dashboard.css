@@ -19,28 +19,28 @@
   border-radius: 2px;
   font-size: 20px;
 }
+
 .OdaBtn {
   font-size: 24px;
 }
 
 /* TOGGLE BUTTON */
+
 .hamburger {
   display: none;
   position: relative;
   background: transparent;
   z-index: 2;
-  
   cursor: pointer;
   display: none;
 }
+
 .line {
   height: 4px;
   width: 40px;
   background: #bd8e39;
   margin-bottom: 5px;
 }
-
-
 
 /* body {
   overflow-x: hidden;
@@ -54,20 +54,19 @@
   color: #fff;
 }
 
-
 /*      RESPONSIVE */
-@media only screen and (max-width:1340px) {
+
+@media only screen and (max-width: 1340px) {
   .Aside-title {
     font-size: 1.4rem;
   }
   .asideNav ul a {
     font-size: 1rem;
   }
- 
 }
 
-@media only screen and (max-width:1010px) {
-  .navbar-toggler  {
+@media only screen and (max-width: 1010px) {
+  .navbar-toggler {
     background: #fff;
   }
   .asideNav {
@@ -76,7 +75,6 @@
   main {
     width: 100%;
   }
-
   .hamburger {
     display: block;
     top: 15px;
@@ -91,11 +89,11 @@
     position: relative;
     left: 200px;
   }
-  .navbar-collapse  .navbar-nav li {
+  .navbar-collapse .navbar-nav li {
     margin-top: 7px;
   }
-  .introduct h5{
-    font-size: .8rem;
+  .introduct h5 {
+    font-size: 0.8rem;
   }
   section h1 {
     font-size: 1.4rem;
@@ -108,4 +106,3 @@
     padding: 10px 20px;
   }
 }
-

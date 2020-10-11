@@ -8,36 +8,31 @@ import {
   Redirect,
 } from "react-router-dom";
 import { useAuth } from "../context/auth";
-import "../dashboard.css";
-
+import "../stylesheets/dashboard.css";
 
 class ToggleButton extends React.Component {
-     
-     ToggleClick() {
-          let hamburger = document.querySelector('.hamburger')
-          let asideNav = document.querySelector('.asideNav')
-          let AsideContente = document.querySelector('.asideNav div')
-          hamburger.addEventListener("click", ()=> {
-               asideNav.classList.toggle('open')
-               AsideContente.classList.toggle("ml")
-               
-          })
-     }
+  ToggleClick() {
+    let hamburger = document.querySelector(".hamburger");
+    let asideNav = document.querySelector(".asideNav");
+    let AsideContente = document.querySelector(".asideNav div");
+    hamburger.addEventListener("click", () => {
+      asideNav.classList.toggle("open");
+      AsideContente.classList.toggle("ml");
+    });
+  }
 
-     render() {
-          return (
-               <div className="container">
-                    <div type="button" onClick={this.ToggleClick} className="hamburger">
-                         <div className="line"></div>
-                         <div className="line"></div>
-                         <div className="line"></div>
-                    </div>
-               </div>
-          )
-     }
+  render() {
+    return (
+      <div className="container">
+        <div type="button" onClick={this.ToggleClick} className="hamburger">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
+      </div>
+    );
+  }
 }
-
-
 
 function AsideNav(props) {
   const { setAuthTokens } = useAuth();
@@ -47,8 +42,6 @@ function AsideNav(props) {
   }
 
   return (
-     
-     
     <nav
       className="asideNav col-lg-3 col-md-12 px-lg-5 px-md-2 pt-3"
       style={{ background: "#344127" }}
@@ -58,7 +51,7 @@ function AsideNav(props) {
           <img src="images/onboard_menu_icon.svg" alt="" /> Open Data
         </a>
 
-        <ul className="navbar-nav mt-5 ">
+        <ul className="navbar-nav mt-lg-5 mt-md-4 ">
           <li className="nav-item active">
             <Link to="/dashboard" className="nav-link h4">
               <i className="fas fa-home mr-2"></i> Dashboard
@@ -99,7 +92,6 @@ function AsideNav(props) {
 function Container() {
   return (
     <main class="col-lg-9 col-md-12">
-
       <div class="container">
         <header class="container px-0 pt-3">
           {/* New Navbar */}
@@ -124,19 +116,19 @@ function Container() {
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ml-auto">
-            <li class="nav-item px-3">
-              <i class="far fa-bell"></i> 2
-            </li>
-            <li>
-              <a
-                className="border-dark btn btn-outline-light text-dark px-4 py-0"
-                href="/"
-              >
-                Level 1
-              </a>
-            </li>
-            <li class="nav-item pl-3 pr-1">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item px-3">
+                  <i class="far fa-bell"></i> 2
+                </li>
+                <li>
+                  <a
+                    className="border-dark btn btn-outline-light text-dark px-4 py-0"
+                    href="/"
+                  >
+                    Level 1
+                  </a>
+                </li>
+                <li class="nav-item pl-3 pr-1">
                   <a href="/" class="nav-link text-dark py-0">
                     <img
                       class="img-fluid rounded-circle pr-2"
@@ -149,66 +141,65 @@ function Container() {
                   </a>
                 </li>
 
+                <li class="nav-item pl-0">
+                  <a href="/" class="nav-link py-0">
+                    <li class="dropdown show nav-item">
+                      <a
+                        class="dropdown-toggle"
+                        href="/"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        {" "}
+                      </a>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuLink"
+                      >
+                        <a class="dropdown-item" href="/">
+                          Action
+                        </a>
+                        <a class="dropdown-item" href="/">
+                          Another action
+                        </a>
+                        <a class="dropdown-item" href="/">
+                          Something else here
+                        </a>
 
-            <li class="nav-item pl-0">
-              <a href="/" class="nav-link py-0">
-                
-
-                <li class="dropdown show nav-item">
-                  <a
-                    class="dropdown-toggle"
-                    href="/"
-                    role="button"
-                    id="dropdownMenuLink"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="/">
-                      Action
-                    </a>
-                    <a class="dropdown-item" href="/">
-                      Another action
-                    </a>
-                    <a class="dropdown-item" href="/">
-                      Something else here
-                    </a>
-
-                    <li class="nav-item pr-3">
-                      <div class="dropdown mr-1">
-                        <button
-                          type="button"
-                          class="dropdown-toggle border-0 bg-transparent"
-                          id="dropdownMenuOffset"
-                          data-toggle="dropdown"
-                          data-offset="10,20"
-                        ></button>
-                        <div
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuOffset"
-                        >
-                          <a class="dropdown-item" href="/">
-                            Log in
-                          </a>
-                          <a class="dropdown-item" href="/">
-                            Sign Up
-                          </a>
-                        </div>
-                      </div>
+                        <li class="nav-item pr-3">
+                          <div class="dropdown mr-1">
+                            <button
+                              type="button"
+                              class="dropdown-toggle border-0 bg-transparent"
+                              id="dropdownMenuOffset"
+                              data-toggle="dropdown"
+                              data-offset="10,20"
+                            ></button>
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuOffset"
+                            >
+                              <a class="dropdown-item" href="/">
+                                Log in
+                              </a>
+                              <a class="dropdown-item" href="/">
+                                Sign Up
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                      </div>{" "}
                     </li>
-                  </div>{" "}
+                  </a>{" "}
                 </li>
-              </a>{" "}
-            </li>
-          </ul>
+              </ul>
             </div>
           </nav>
 
-          {/* ////////////////////////////////////////////////////////////////////// */}
-          
+          {/* //////////////////////////////   MAIN PAGE //////////////////////////////////////// */}
         </header>
         <section class="mt-5 introduct">
           <div class="card" style={{ background: "#344127" }}>
@@ -470,33 +461,32 @@ function ContactUs() {
 }
 function Dashboard(props) {
   return (
-     <div>
-     <ToggleButton/>
+    <div>
+      <ToggleButton />
 
-    <div className="row">
-     
-      <Router>
-        <AsideNav />
-           
-        <Switch>
-          <Route exact path="/dashboard/">
-            <Container />
-          </Route>
-          <Route exact path="/dashboard/stats">
-            <Stats />
-          </Route>
-          <Route exact path="/dashboard/uploads">
-            <Uploads />
-          </Route>
-          <Route exact path="/dashboard/contactus">
-            <ContactUs />
-          </Route>
-          <Route exact path="/dashboard/information">
-            <Information />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+      <div className="row">
+        <Router>
+          <AsideNav />
+
+          <Switch>
+            <Route exact path="/dashboard/">
+              <Container />
+            </Route>
+            <Route exact path="/dashboard/stats">
+              <Stats />
+            </Route>
+            <Route exact path="/dashboard/uploads">
+              <Uploads />
+            </Route>
+            <Route exact path="/dashboard/contactus">
+              <ContactUs />
+            </Route>
+            <Route exact path="/dashboard/information">
+              <Information />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
     </div>
   );
 }
