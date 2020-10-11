@@ -32,7 +32,6 @@
   background: transparent;
   z-index: 2;
   cursor: pointer;
-  display: none;
 }
 
 .line {
@@ -60,6 +59,7 @@
   .Aside-title {
     font-size: 1.4rem;
   }
+
   .asideNav ul a {
     font-size: 1rem;
   }
@@ -69,38 +69,48 @@
   .navbar-toggler {
     background: #fff;
   }
+
   .asideNav {
     display: none;
   }
+
   main {
     width: 100%;
   }
+
   .hamburger {
     display: block;
     top: 15px;
   }
+
   .open {
     display: inline;
     position: relative;
     bottom: 40px;
     padding: 25px 0;
   }
+
   .ml {
     position: relative;
     left: 200px;
   }
+
   .navbar-collapse .navbar-nav li {
     margin-top: 7px;
   }
+
   .introduct h5 {
     font-size: 0.8rem;
   }
+
   section h1 {
     font-size: 1.4rem;
   }
+  
   section h5 {
     font-size: 1rem;
   }
+  
   .OdaBtn {
     font-size: 1rem;
     padding: 10px 20px;
